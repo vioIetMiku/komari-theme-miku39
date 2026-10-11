@@ -1,0 +1,192 @@
+{
+  "name": {
+    "zh-CN": "初音未来 · Miku39",
+    "en": "Hatsune Miku · Miku39"
+  },
+  "short": "miku39",
+  "description": {
+    "zh-CN": "支持本地图片或链接自定义背景，服务器显示尺寸有极简、紧凑、标准、放大四档；高清地球与自定义标记名称，完整资源历史、流量、价格和到期信息。",
+    "en": "Custom backgrounds from local images or URLs; four server display sizes, from minimal to enlarged; detailed globe with custom labels, resource history, traffic, price and expiry."
+  },
+  "version": "1.4.4",
+  "author": "Miku39",
+  "preview": "dist/assets/daydream-thumb.webp",
+  "configuration": {
+    "type": "managed",
+    "icon": "/themes/miku39/dist/assets/favicon.svg",
+    "name": {
+      "zh-CN": "Miku 主题设置",
+      "en": "Miku theme settings"
+    },
+    "data": [
+      {
+        "name": "Miku · 站点文案",
+        "type": "title"
+      },
+      {
+        "key": "headline",
+        "name": "首页标题",
+        "type": "string",
+        "default": "每一份连接，都有回响。",
+        "help": "纯文本标题；留空时使用站点名称。"
+      },
+      {
+        "key": "subtitle",
+        "name": "首页副标题",
+        "type": "string",
+        "default": "让未来的声音，陪伴你的每一台服务器。"
+      },
+      {
+        "name": "Miku · 显示尺寸",
+        "type": "title"
+      },
+      {
+        "key": "default_node_size",
+        "name": "默认服务器显示尺寸",
+        "type": "select",
+        "options": "mini,compact,standard,large",
+        "default": "compact",
+        "help": "mini 极简 / compact 紧凑（推荐）/ standard 标准 / large 放大。卡片和表格同步调整；访客可自行切换，已保存的选择优先。"
+      },
+      {
+        "name": "Miku · 壁纸与玻璃",
+        "type": "title"
+      },
+      {
+        "key": "default_wallpaper",
+        "name": "默认背景",
+        "type": "select",
+        "options": "daydream,wonderland,starlight",
+        "default": "daydream",
+        "help": "daydream 晴空初音 / wonderland 甜梦游园 / starlight 星光舞台。访客可自行切换。"
+      },
+      {
+        "key": "background_dim",
+        "name": "默认遮罩强度 (%)",
+        "type": "number",
+        "default": 60,
+        "help": "建议 60–85；主题自动限制在 20–95。"
+      },
+      {
+        "key": "glass_enabled",
+        "name": "默认开启毛玻璃",
+        "type": "switch",
+        "default": true
+      },
+      {
+        "key": "panel_opacity",
+        "name": "默认面板不透明度 (%)",
+        "type": "number",
+        "default": 64,
+        "help": "10–100；值越小越透明。"
+      },
+      {
+        "key": "glass_blur",
+        "name": "默认毛玻璃强度 (px)",
+        "type": "number",
+        "default": 24,
+        "help": "0–40；访客可以自行调整。"
+      },
+      {
+        "key": "border_strength",
+        "name": "默认玻璃边框亮度 (%)",
+        "type": "number",
+        "default": 32
+      },
+      {
+        "name": "Miku · 连接伙伴",
+        "type": "title"
+      },
+      {
+        "key": "show_mascot",
+        "name": "默认显示 Miku 伙伴",
+        "type": "switch",
+        "default": true
+      },
+      {
+        "key": "default_mascot",
+        "name": "默认 Miku 伙伴",
+        "type": "select",
+        "options": "classic,leek,orbit,song",
+        "default": "classic",
+        "help": "classic 经典初音 / leek 葱葱日常 / orbit 星航宇宙 / song 应援歌姬。"
+      },
+      {
+        "name": "Miku · 地球流向",
+        "type": "title"
+      },
+      {
+        "key": "show_globe",
+        "name": "默认显示三维地球",
+        "type": "switch",
+        "default": true
+      },
+      {
+        "key": "globe_quality",
+        "name": "默认地球画质",
+        "type": "select",
+        "options": "auto,high,eco",
+        "default": "auto",
+        "help": "auto 自适应 / high 细腻 / eco 省电。支持本地 GPU 绘制与兼容模式。"
+      },
+      {
+        "key": "globe_glow",
+        "name": "默认地球辉光 (%)",
+        "type": "number",
+        "default": 70,
+        "help": "0–100；访客可以自行调整。"
+      },
+      {
+        "key": "default_destination",
+        "name": "默认汇聚区域",
+        "type": "select",
+        "options": "china,beijing,tianjin,shanghai,chongqing,hebei,shanxi,liaoning,jilin,heilongjiang,jiangsu,zhejiang,anhui,fujian,jiangxi,shandong,henan,hubei,hunan,guangdong,hainan,sichuan,guizhou,yunnan,shaanxi,gansu,qinghai,taiwan,inner-mongolia,guangxi,tibet,ningxia,xinjiang,hongkong,macau,custom",
+        "default": "china",
+        "help": "china = 中国（全国）；34 个省级地区使用英文拼音标识；custom = 自定义。访客可自行选择，地区选项使用代表点示意。"
+      },
+      {
+        "key": "destination_name",
+        "name": "自定义区域名称",
+        "type": "string",
+        "default": "自定义区域",
+        "help": "仅在默认汇聚区域为 custom 时使用。"
+      },
+      {
+        "key": "destination_lat",
+        "name": "自定义纬度",
+        "type": "number",
+        "default": 35.8617,
+        "help": "−90 到 90；仅用于地球流向示意。"
+      },
+      {
+        "key": "destination_lng",
+        "name": "自定义经度",
+        "type": "number",
+        "default": 104.1954,
+        "help": "−180 到 180；仅用于地球流向示意。"
+      },
+      {
+        "name": "Miku · 延迟与丢包",
+        "type": "title"
+      },
+      {
+        "key": "show_inline_ping",
+        "name": "默认显示延迟与丢包曲线",
+        "type": "switch",
+        "default": true,
+        "help": "Agent 公开 Ping 采样；延迟与丢包均有曲线，缺失采样不补零。"
+      },
+      {
+        "name": "Miku · 音乐律动",
+        "type": "title"
+      },
+      {
+        "key": "music_visuals",
+        "name": "默认采样节拍",
+        "type": "switch",
+        "default": true,
+        "help": "延迟和丢包柱高取真实采样；装饰律动可关闭，尊重系统减少动态效果。"
+      }
+    ]
+  }
+}

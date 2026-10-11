@@ -1,0 +1,17 @@
+# Local preview output and generated bundles
+/output/
+/output*/
+*.zip
+
+# Developer environment
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
