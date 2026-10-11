@@ -6,7 +6,11 @@
 
 为 Komari 服务器监控打造的初音未来风格主题，将青绿色、可调毛玻璃、插画背景与音乐视觉融入探针面板，在保留监控信息的同时，让日常查看服务器更有趣。
 
-[下载安装](https://github.com/vioIetMiku/komari-theme-miku39/releases) · [详细使用说明](docs/USAGE.md) · [问题反馈](https://github.com/vioIetMiku/komari-theme-miku39/issues)
+**[点击下载 Miku39 v1.4.4 主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip)**
+
+安装地址：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip>
+
+[版本发布页](https://github.com/vioIetMiku/komari-theme-miku39/releases/tag/v1.4.4) · [详细使用说明](docs/USAGE.md) · [问题反馈](https://github.com/vioIetMiku/komari-theme-miku39/issues)
 
 **当前版本：v1.4.4** · **原生 JavaScript / CSS** · **代码采用 MIT 许可**
 
@@ -35,7 +39,7 @@
 
 ## 快速安装
 
-1. 前往 [Releases](https://github.com/vioIetMiku/komari-theme-miku39/releases)，下载 **`komari-theme-miku39-v1.4.4.zip`**。
+1. [直接下载主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip)，或前往 [Releases](https://github.com/vioIetMiku/komari-theme-miku39/releases) 下载 **`komari-theme-miku39-v1.4.4.zip`**。
 2. 登录 Komari 管理后台，在主题管理中上传 ZIP。已有同名主题时，按后台提供的更新或覆盖流程替换。
 3. 启用 **「初音未来 · Miku39」**，刷新首页；如仍显示旧资源，可尝试浏览器强制刷新。
 4. 使用首页右上角的 **「切换背景」** 和 **「主题设置」** 调整外观；在后台 **「Miku 主题设置」** 中配置新访客的默认值。
