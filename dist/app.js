@@ -1,4 +1,4 @@
-/* Miku39 v1.4.4 | MIT (code); see ASSETS.md for artwork */
+/* Miku39 v1.4.5 | MIT (code); see ASSETS.md for artwork */
 (()=>{
 'use strict';
 // domain.js
@@ -484,7 +484,7 @@ function renderShell(){
     <div id="error-banner" hidden></div>
     <section id="nodes-panel" role="tabpanel" aria-labelledby="tab-nodes"><div class="filters"><div class="groups" id="groups"></div><div class="filter-inputs"><label class="search-box">${icon('search')}<input id="search-input" type="search" placeholder="搜索服务器、地区、标签" aria-label="搜索服务器"><kbd>/</kbd></label><select id="status-select" aria-label="筛选服务器状态"><option value="all">全部状态</option><option value="online">在线</option><option value="offline">离线</option><option value="unknown">待更新</option></select><select id="sort-select" aria-label="服务器排序"><option value="weight">默认排序</option><option value="name">服务器名称</option><option value="cpu">CPU 降序</option><option value="ram">内存降序</option><option value="traffic">流量降序</option><option value="expiry">到期时间</option></select><div class="view-toggle" aria-label="显示方式"><button data-view="grid" aria-label="卡片视图" aria-pressed="true">${icon('grid')}</button><button data-view="table" aria-label="表格视图" aria-pressed="false">${icon('list')}</button></div></div></div><div id="nodes-container" class="node-grid km-instance-server-list"></div><div class="fleet-foot"><span id="filter-count">正在读取服务器…</span><span>${icon('info')}速率按字节每秒显示</span></div></section>
     <section id="network-panel" class="panel network-panel" role="tabpanel" aria-labelledby="tab-network" hidden></section>
-    <footer class="km-footer"><div class="footer-brand">${icon('music')}Made with <span class="pink">♡</span> & a little Miku magic.</div><div class="footer-right"><a href="https://github.com/komari-monitor/komari" target="_blank" rel="noopener noreferrer">Powered by Komari Monitor.</a><span>MIKU39 v1.4.4</span><a id="logout-link" href="/api/logout" hidden>退出登录</a><button data-dialog="settings-dialog">个性化</button></div></footer>
+    <footer class="km-footer"><div class="footer-brand">${icon('music')}Made with <span class="pink">♡</span> & a little Miku magic.</div><div class="footer-right"><a href="https://github.com/komari-monitor/komari" target="_blank" rel="noopener noreferrer">Powered by Komari Monitor.</a><span>MIKU39 v1.4.5</span><a id="logout-link" href="/api/logout" hidden>退出登录</a><button data-dialog="settings-dialog">个性化</button></div></footer>
   </main>
 
   <dialog id="wallpaper-dialog" aria-labelledby="wallpaper-title"><div class="dialog-inner"><div class="dialog-header"><div><h2 id="wallpaper-title">${icon('image')}选择你的世界</h2><p>上传你的图片，或选择一种初音心情。</p></div><button class="icon-button" data-close="wallpaper-dialog" aria-label="关闭背景设置">${icon('close')}</button></div><div id="wallpaper-options"></div></div></dialog>

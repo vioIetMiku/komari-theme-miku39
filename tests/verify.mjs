@@ -68,7 +68,7 @@ const none=await nullRecords.api.getPing('new',1);
 test('Null records are an empty state rather than an exception',()=>assert.equal(none.records.length,0));
 test('Malformed timestamps keep latest latency unknown',()=>{const html=a.renderPingDetail({tasks:[{id:1,name:'无时间戳'}],records:[{task_id:1,value:20,time:'invalid'}]},node,1);assert.doesNotMatch(html,/undefined ms|NaN/);assert.match(html,/20.0 ms/);});
 const meta=JSON.parse(fs.readFileSync(root+'/komari-theme.json'));
-test('Theme version, script order and all local assets match installation contract',()=>{assert.equal(meta.version,'1.4.4');const index=fs.readFileSync(root+'/dist/index.html','utf8');assert.ok(index.indexOf('dom.js')<index.indexOf('app.js'));assert.ok(index.indexOf('destinations.js')<index.indexOf('app.js'));assert.ok(index.indexOf('regions.js')<index.indexOf('globe.js'));assert.ok(index.indexOf('globe.js')<index.indexOf('app.js'));for(const name of ['miku.webp','miku-leek.webp','miku-orbit.webp','miku-song.webp'])assert.ok(fs.statSync(root+'/dist/assets/'+name).size>10000);const count=fs.readdirSync(root+'/dist/assets/flags').filter(f=>f.endsWith('.svg')).length;assert.ok(count>=60);});
+test('Theme version, script order and all local assets match installation contract',()=>{assert.equal(meta.version,'1.4.5');const index=fs.readFileSync(root+'/dist/index.html','utf8');assert.ok(index.indexOf('dom.js')<index.indexOf('app.js'));assert.ok(index.indexOf('destinations.js')<index.indexOf('app.js'));assert.ok(index.indexOf('regions.js')<index.indexOf('globe.js'));assert.ok(index.indexOf('globe.js')<index.indexOf('app.js'));for(const name of ['miku.webp','miku-leek.webp','miku-orbit.webp','miku-song.webp'])assert.ok(fs.statSync(root+'/dist/assets/'+name).size>10000);const count=fs.readdirSync(root+'/dist/assets/flags').filter(f=>f.endsWith('.svg')).length;assert.ok(count>=60);});
 
 test('Display size migration preserves both old compact choices and unrelated preferences',()=>{
  const fresh=load(true);assert.equal(fresh.api.prefs.nodeSize,'compact');
@@ -472,5 +472,15 @@ test('Background settings escape names and link drafts, retain typing and provid
  const settings=visitor.element('wallpaper-options').innerHTML;assert.doesNotMatch(settings,/<svg onload|<img src=x/);assert.match(settings,/&lt;svg/);assert.match(settings,/id="wallpaper-file"/);assert.match(settings,/id="wallpaper-url-form"/);assert.match(settings,/&quot;&gt;&lt;img/);
  assert.equal(visitor.element('wallpaper-url').value,'"><img src=x onerror=alert(1)>');
  const index=fs.readFileSync(root+'/dist/index.html','utf8');assert.ok(index.indexOf('backgrounds.js')<index.indexOf('app.js'));
+});
+
+test('Market manifest metadata uses valid plain-text fields',()=>{
+ for(const field of ['name','short','version','author','description']){
+  assert.equal(typeof meta[field],'string',field+' must be a string');
+  assert.ok(meta[field].trim(),field+' must not be empty');
+ }
+ assert.match(meta.short,/^[A-Za-z0-9_-]+$/);
+ assert.equal(meta.name,'初音未来 · Miku39');
+ assert.equal(meta.configuration.name['zh-CN'],'Miku 主题设置');
 });
 console.log(`${checks} checks passed`);

@@ -6,15 +6,15 @@
 
 为 Komari 服务器监控打造的初音未来风格主题，将青绿色、可调毛玻璃、插画背景与音乐视觉融入探针面板，在保留监控信息的同时，让日常查看服务器更有趣。
 
-**[点击下载 Miku39 v1.4.4 主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip)**
+**[点击下载 Miku39 v1.4.5 主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.5/komari-theme-miku39-v1.4.5.zip)**
 
-效果预览：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/miku39-v1.4.4-preview.html>
+效果预览：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.5/miku39-v1.4.5-preview.html>
 
-安装地址：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip>
+安装地址：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.5/komari-theme-miku39-v1.4.5.zip>
 
-[版本发布页](https://github.com/vioIetMiku/komari-theme-miku39/releases/tag/v1.4.4) · [详细使用说明](docs/USAGE.md) · [问题反馈](https://github.com/vioIetMiku/komari-theme-miku39/issues)
+[版本发布页](https://github.com/vioIetMiku/komari-theme-miku39/releases/tag/v1.4.5) · [详细使用说明](docs/USAGE.md) · [问题反馈](https://github.com/vioIetMiku/komari-theme-miku39/issues)
 
-**当前版本：v1.4.4** · **原生 JavaScript / CSS** · **代码采用 MIT 许可**
+**当前版本：v1.4.5** · **原生 JavaScript / CSS** · **代码采用 MIT 许可**
 
 ![晴空初音主题封面](dist/assets/daydream.webp)
 
@@ -23,6 +23,10 @@
 </div>
 
 > 这是独立制作的 Komari 第三方主题，不是 Komari 或初音未来的官方产品。使用前需要已有的 Komari 服务；本仓库不包含探针后端。
+
+## v1.4.5 官方主题市场兼容修复
+
+顶层 `name` 与 `description` 改为非空字符串，以符合官方主题市场的安装包校验规则；后台配置多语言名称保留。此次仅修复元数据兼容性与更新资源版本号，监控和外观功能不变。新增元数据回归检查，防止再次提交不兼容字段。
 
 ## 有什么不一样
 
@@ -41,7 +45,7 @@
 
 ## 快速安装
 
-1. [直接下载主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip)，或前往 [Releases](https://github.com/vioIetMiku/komari-theme-miku39/releases) 下载 **`komari-theme-miku39-v1.4.4.zip`**。
+1. [直接下载主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.5/komari-theme-miku39-v1.4.5.zip)，或前往 [Releases](https://github.com/vioIetMiku/komari-theme-miku39/releases) 下载 **`komari-theme-miku39-v1.4.5.zip`**。
 2. 登录 Komari 管理后台，在主题管理中上传 ZIP。已有同名主题时，按后台提供的更新或覆盖流程替换。
 3. 启用 **「初音未来 · Miku39」**，刷新首页；如仍显示旧资源，可尝试浏览器强制刷新。
 4. 使用首页右上角的 **「切换背景」** 和 **「主题设置」** 调整外观；在后台 **「Miku 主题设置」** 中配置新访客的默认值。
@@ -67,7 +71,7 @@
 - 地球支持拖动、缩放、自动旋转、位置聚焦与画质切换；WebGL 不可用时回退到 Canvas 兼容绘制。
 - 关闭动效或启用系统「减少动态效果」可减少持续动画；画质提供自适应、细腻、省电三档。
 
-## v1.4.4 更新亮点
+## v1.4.4 功能更新亮点
 
 本版本新增**本地图片与图片链接自定义背景**，并保留此前版本的四档服务器尺寸、紧凑计费信息、自定义地球标记名称，以及资源历史、流量、价格和到期信息展示。
 
@@ -85,7 +89,7 @@
 node tests/verify.mjs
 ```
 
-本次发布准备在 Node.js 24.20.0 下运行，**83 项检查全部通过**，覆盖采样口径、局部刷新、历史数据回退、显示尺寸、标记名称和自定义背景等逻辑。GitHub Actions 会在推送和 Pull Request 时运行同一套检查。
+本次发布准备在 Node.js 24.20.0 下运行，**84 项检查全部通过**，覆盖采样口径、局部刷新、历史数据回退、显示尺寸、标记名称和自定义背景等逻辑。GitHub Actions 会在推送和 Pull Request 时运行同一套检查。
 
 **离线演示：Python 3，无需连接 Komari 服务。**
 
@@ -93,7 +97,7 @@ node tests/verify.mjs
 python -X utf8 scripts/make_preview.py
 ```
 
-生成文件位于仓库同级的 `output/miku39-v1.4.4-preview.html`，直接用浏览器打开即可。演示中的六台服务器为明确标注的模拟数据，不代表真实探针。
+生成文件位于仓库同级的 `output/miku39-v1.4.5-preview.html`，直接用浏览器打开即可。演示中的六台服务器为明确标注的模拟数据，不代表真实探针。
 
 重建地理资源需要 Python 3 与 Pillow；可选着色器验证需要 Pillow 及 Mesa EGL/OpenGL。详见 [验证记录](QA.md) 和 [地理数据说明](data/README.md)。
 

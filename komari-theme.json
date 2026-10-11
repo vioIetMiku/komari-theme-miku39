@@ -1,14 +1,8 @@
 {
-  "name": {
-    "zh-CN": "初音未来 · Miku39",
-    "en": "Hatsune Miku · Miku39"
-  },
+  "name": "初音未来 · Miku39",
   "short": "miku39",
-  "description": {
-    "zh-CN": "支持本地图片或链接自定义背景，服务器显示尺寸有极简、紧凑、标准、放大四档；高清地球与自定义标记名称，完整资源历史、流量、价格和到期信息。",
-    "en": "Custom backgrounds from local images or URLs; four server display sizes, from minimal to enlarged; detailed globe with custom labels, resource history, traffic, price and expiry."
-  },
-  "version": "1.4.4",
+  "description": "支持本地图片或链接自定义背景，服务器显示尺寸有极简、紧凑、标准、放大四档；高清地球与自定义标记名称，完整资源历史、流量、价格和到期信息。",
+  "version": "1.4.5",
   "author": "Miku39",
   "preview": "dist/assets/daydream-thumb.webp",
   "configuration": {

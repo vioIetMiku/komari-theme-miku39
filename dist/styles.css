@@ -275,7 +275,7 @@ html[data-node-size="large"] .km-instance-server-list :is(.table-traffic small,.
 .node-size-note{font-size:10px;color:var(--muted);line-height:1.7;margin:12px 0 6px}
 @media(max-width:480px){.node-size-picker{grid-template-columns:repeat(2,minmax(0,1fr))}.node-size-choice{min-height:104px}.node-size-choice small{font-size:10px}}
 
-/* v1.4.4 Custom backgrounds share the existing dim, blur and glass controls. */
+/* v1.4.5 Custom backgrounds share the existing dim, blur and glass controls. */
 .custom-wallpaper-preview{position:relative;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface-soft);margin:0 0 16px;min-height:130px}
 .custom-wallpaper-preview img{display:block;width:100%;height:160px;object-fit:cover}
 .custom-wallpaper-preview>span{position:absolute;left:10px;bottom:10px;padding:4px 9px;border-radius:6px;font-size:10px;background:#07151edb;color:#eaf5f6;max-width:calc(100% - 20px)}
