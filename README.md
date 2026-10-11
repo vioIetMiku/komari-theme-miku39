@@ -8,6 +8,8 @@
 
 **[点击下载 Miku39 v1.4.4 主题安装包](https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip)**
 
+效果预览：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/miku39-v1.4.4-preview.html>
+
 安装地址：<https://github.com/vioIetMiku/komari-theme-miku39/releases/download/v1.4.4/komari-theme-miku39-v1.4.4.zip>
 
 [版本发布页](https://github.com/vioIetMiku/komari-theme-miku39/releases/tag/v1.4.4) · [详细使用说明](docs/USAGE.md) · [问题反馈](https://github.com/vioIetMiku/komari-theme-miku39/issues)
